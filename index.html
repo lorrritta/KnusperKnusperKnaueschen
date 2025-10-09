@@ -1,59 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KnusperKnusperKnäuschen</title>
+
+    <!-- Elegante, feine Schnörkelschrift -->
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
     <style>
-      body {
-        background-image: url('DEIN-BILD-LINK.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      /* 🖤 Schwarzer Gesamt-Hintergrund */
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: #fefefe;
+        font-family: cursive;
+        line-height: 1.4;
+        overflow-x: hidden;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      /* ✨ Feine, elegante Schnörkelschrift für den Titel */
+      h2 {
+        font-family: 'Tangerine', cursive;
+        font-size: 4.5em;
+        text-align: center;
+        color: #fff;
+        margin: 40px auto 20px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-shadow:
+          0 0 10px rgba(255, 255, 255, 0.2),
+          0 0 25px rgba(255, 170, 60, 0.2),
+          0 0 40px rgba(255, 150, 0, 0.1);
+        z-index: 2;
+        position: relative;
       }
 
       .model-container {
-        width: 80%;
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: rgba(222, 222, 234, 0.5); /* Blau mit Transparenz */
-       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Schatten */
+        text-align: center;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
       }
 
       model-viewer {
         width: 100%;
-        height: auto;
-        min-height: 300px;
-        background-color: rgba(21, 0, 255, 0.7);
+        min-height: 240px;
+        background-color: rgba(5, 5, 10, 0.8);
       }
 
-      .text-box {
-        width: 80%;
-        padding: 20px;
-        margin: 20px auto;
-        background-color: rgba(11, 69, 241, 0.8);
-        max-width: 800px;
-        color: rgb(174, 240, 8);
-        text-align: left;
-        box-sizing: border-box;
-        font-family: cursive;
+      /* 🩶 Kompakter Textbereich – bleibt lesbar über dem Feuer */
+      .content {
+        width: 70%;
+        max-width: 750px;
+        margin: 0 auto 80px; /* Abstand zum Feuer unten */
+        font-size: 0.85em;
+        line-height: 1.25;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        text-shadow: 0 0 8px rgba(0,0,0,0.9); /* für bessere Lesbarkeit */
       }
 
-      h2 {
-        margin: 10;
-        padding: 10px;
-        color: black;
-        background-color: rgba(255, 255, 255, 0.7);
-        font-style: italic; /* Headline kursiv */
+      .content p {
+        margin: 5px 0;
+      }
+
+      strong {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+      }
+
+      /* 🔥 Feuer-GIF am unteren Rand */
+      .fire-background {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 180px; /* Höhe des Feuers */
+        background: url('fire-fire-emote.gif') center bottom repeat-x;
+        background-size: contain;
+        opacity: 0.7; /* leicht transparent */
+        z-index: 1;
+        pointer-events: none; /* damit man nicht draufklickt */
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 3em;
+        }
+        .content {
+          width: 90%;
+          font-size: 0.8em;
+          margin-bottom: 60px;
+        }
+        .fire-background {
+          height: 120px;
+        }
       }
     </style>
   </head>
+
   <body>
     <h2>Die letzte Hexenverbrennung Hamburgs</h2>
+
     <div class="model-container">
-      <img src="fire-fire-emote.gif" alt="JavaScript Logo" style="width:50px; height:auto; vertical-align:middle; margin-right:10px;">
       <model-viewer src="Lorettas_3D_bums.glb"
                     ios-src="Lorettas_3D_bums.usdz.usdz"
                     alt="Lorettas_Projekt"
@@ -64,14 +120,16 @@
                     animation-loop
                     animation-name="CubeAction"
                     ar-modes="webxr scene-viewer quick-look"
-                    environment-image="neutral">   
+                    environment-image="neutral">
       </model-viewer>
     </div>
-    <div class="text-box">
-Die letzte Hexenverfolgung in Hamburg
-Der letzte dokumentierte Hexenprozess mit Todesurteil in Hamburg fand im Jahr 1642 statt. Angeklagt war Cillie Hempels, der zur Last gelegt wurde, ihren Ehemann durch magische Praktiken getötet und einen Pakt mit dem Teufel geschlossen zu haben. Das Verfahren endete mit einem Urteil auf Verbrennung, das in Hamburg öffentlich vollstreckt wurde.
-Der Fall Hempels gilt in der Forschung als die letzte nachweisbare Hinrichtung wegen Hexerei in der Stadt. Während in vielen Regionen des Heiligen Römischen Reiches die Verfolgungen bis in die 1670er- und 1680er-Jahre andauerten, setzte in Hamburg bereits Mitte des 17. Jahrhunderts ein deutlicher Rückgang solcher Prozesse ein. Dies lässt sich unter anderem auf die wachsende Skepsis gegenüber der Beweiskraft von Geständnissen unter Folter, auf Veränderungen im theologischen Denken sowie auf den Einfluss aufgeklärter Juristen zurückführen.
-Die Hamburger Hexenprozesse, darunter der Fall Hempels, zeichnen sich insgesamt durch eine vergleichsweise geringe Intensität aus. Dennoch verdeutlichen sie, dass auch in einer wohlhabenden Handelsstadt wie Hamburg die Vorstellungen von Teufelspakt und Zauberei tief im gesellschaftlichen Bewusstsein verankert waren. Der Prozess gegen Cillie Hempels markiert somit nicht nur das Ende der Hexenverfolgungen in Hamburg, sondern steht exemplarisch für den Übergang von vormodernem Aberglauben zu rationaleren Rechtsauffassungen im frühneuzeitlichen Europa.
+
+    <div class="content">
+      <p><strong>Die letzte Hexenverfolgung in Hamburg</strong></p>
+      <p>Der letzte dokumentierte Hexenprozess mit Todesurteil in Hamburg fand im Jahr 1642 statt. Angeklagt war Cillie Hempels, der zur Last gelegt wurde, ihren Ehemann durch magische Praktiken getötet und einen Pakt mit dem Teufel geschlossen zu haben.</p>
     </div>
+
+    <!-- 🔥 Feuer-GIF als unterer Rand -->
+    <div class="fire-background"></div>
   </body>
 </html>
