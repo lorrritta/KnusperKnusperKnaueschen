@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frauen im Feuer der Macht</title>
 
+    <!-- Elegante, feine Schnörkelschrift -->
     <link
       href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- 3D Viewer -->
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
 
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         padding: 0;
         background-color: #000;
@@ -38,32 +41,24 @@
         font-weight: 700;
         position: relative;
         z-index: 2;
-        text-shadow:
-          0 0 20px rgba(255, 200, 100, 1),
-          0 0 40px rgba(255, 160, 50, 1),
-          0 0 80px rgba(255, 120, 0, 0.9),
-          0 0 140px rgba(255, 80, 0, 0.8),
-          0 0 220px rgba(255, 50, 0, 0.6),
+        text-shadow: 0 0 20px rgba(255, 200, 100, 1),
+          0 0 40px rgba(255, 160, 50, 1), 0 0 80px rgba(255, 120, 0, 0.9),
+          0 0 140px rgba(255, 80, 0, 0.8), 0 0 220px rgba(255, 50, 0, 0.6),
           0 0 300px rgba(255, 40, 0, 0.4);
         animation: glowPulse 3s ease-in-out infinite;
       }
 
       @keyframes glowPulse {
-        0%, 100% {
-          text-shadow:
-            0 0 15px rgba(255, 220, 120, 1),
-            0 0 35px rgba(255, 170, 60, 1),
-            0 0 70px rgba(255, 120, 0, 1),
-            0 0 120px rgba(255, 70, 0, 0.9),
-            0 0 200px rgba(255, 40, 0, 0.8);
+        0%,
+        100% {
+          text-shadow: 0 0 15px rgba(255, 220, 120, 1),
+            0 0 35px rgba(255, 170, 60, 1), 0 0 70px rgba(255, 120, 0, 1),
+            0 0 120px rgba(255, 70, 0, 0.9), 0 0 200px rgba(255, 40, 0, 0.8);
         }
         50% {
-          text-shadow:
-            0 0 25px rgba(255, 240, 180, 1),
-            0 0 50px rgba(255, 200, 80, 1),
-            0 0 100px rgba(255, 150, 0, 1),
-            0 0 180px rgba(255, 90, 0, 1),
-            0 0 260px rgba(255, 60, 0, 0.9);
+          text-shadow: 0 0 25px rgba(255, 240, 180, 1),
+            0 0 50px rgba(255, 200, 80, 1), 0 0 100px rgba(255, 150, 0, 1),
+            0 0 180px rgba(255, 90, 0, 1), 0 0 260px rgba(255, 60, 0, 0.9);
         }
       }
 
@@ -101,8 +96,8 @@
         font-size: 0.85em;
         margin-top: -20px;
         margin-bottom: 80px;
-        position: relative;
         z-index: 2;
+        position: relative;
         text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
       }
 
@@ -138,7 +133,7 @@
         position: fixed;
         bottom: 180px;
         left: 20px;
-        width: 150px; /* verkleinerte Größe */
+        width: 140px;
         z-index: 10;
         pointer-events: none;
       }
@@ -147,7 +142,7 @@
         position: fixed;
         bottom: 180px;
         right: 20px;
-        width: 150px; /* verkleinerte Größe */
+        width: 140px;
         z-index: 10;
         pointer-events: none;
         transform: scaleX(-1);
@@ -157,42 +152,70 @@
         position: fixed;
         bottom: 180px;
         right: 120px;
-        width: 140px;
+        width: 100px;
         z-index: 10;
         pointer-events: none;
+      }
+
+      .overlay-text {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 0.9em;
+        color: #c080ff;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        margin: -200px auto 40px;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        border-radius: 8px;
       }
 
       @media (max-width: 600px) {
         h2 {
           font-size: 3em;
         }
+
         .content {
           width: 90%;
           font-size: 0.8em;
           margin-bottom: 60px;
         }
+
         .link-box {
           font-size: 0.8em;
           margin-bottom: 60px;
         }
+
         .fire-background {
           height: 120px;
         }
+
         .hexe-gif,
         .hexe-gif-right {
           width: 110px;
           bottom: 120px;
         }
+
         .hexe-gif {
           left: 10px;
         }
+
         .hexe-gif-right {
           right: 10px;
         }
+
         .witch-gif {
-          width: 100px;
+          width: 80px;
           bottom: 120px;
           right: 110px;
+        }
+
+        .overlay-text {
+          font-size: 0.75em;
+          width: 90%;
+          margin-top: -160px;
         }
       }
     </style>
@@ -213,6 +236,11 @@
         autoplay
         environment-image="neutral"
       ></model-viewer>
+    </div>
+
+    <!-- 🟣 Comic Sans Textblock -->
+    <div class="overlay-text">
+      Im Rahmen eines Projektes beschäftigte ich mich mit dem Thema der Hexenverbrennungen Hamburgs. Eine tragisches Schicksal, welches in erster Linie Frauen in der Zeit zwischen 1450 und 1750 traf. Der Garten der Frauen auf dem Ohlsdorfer Friedhof erinnert noch immer an Frauen, die eines ungerechtfertigten Todes sterben mussten. Mein 3D-Modell bezieht sich auf ein klischeebehaftetes Bild der sogenannten "Hexe", als welches viele Frauen bezeichnet wurden, um so trotz mangelnder Beweislage, und häufig nur wegen ihres Aussehens zum Tode verurteilt wurden.
     </div>
 
     <div class="content">
@@ -238,5 +266,6 @@
     <!-- Hexen-GIFs -->
     <img src="radio-disco-polo.gif" alt="Hexe links" class="hexe-gif" />
     <img src="radio-disco-polo.gif" alt="Hexe rechts gespiegelt" class="hexe-gif-right" />
+    <img src="witch.gif" alt="Hexe rechts klein" class="witch-gif" />
   </body>
 </html>
