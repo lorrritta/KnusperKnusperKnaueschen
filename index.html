@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KnusperKnusperKnäuschen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frauen im Feuer der Macht</title>
 
     <!-- Elegante, feine Schnörkelschrift -->
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- 3D Viewer -->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
 
     <style>
-      html, body {
+      html,
+      body {
         margin: 0;
         padding: 0;
         background-color: #000;
@@ -24,9 +31,8 @@
         min-height: 100vh;
       }
 
-      /* ✨ Leuchtender Titel */
       h2 {
-        font-family: 'Tangerine', cursive;
+        font-family: "Tangerine", cursive;
         font-size: 4.8em;
         text-align: center;
         color: #ffffff;
@@ -35,33 +41,24 @@
         font-weight: 700;
         position: relative;
         z-index: 2;
-        text-shadow:
-          0 0 20px rgba(255, 200, 100, 1),
-          0 0 40px rgba(255, 160, 50, 1),
-          0 0 80px rgba(255, 120, 0, 0.9),
-          0 0 140px rgba(255, 80, 0, 0.8),
-          0 0 220px rgba(255, 50, 0, 0.6),
+        text-shadow: 0 0 20px rgba(255, 200, 100, 1),
+          0 0 40px rgba(255, 160, 50, 1), 0 0 80px rgba(255, 120, 0, 0.9),
+          0 0 140px rgba(255, 80, 0, 0.8), 0 0 220px rgba(255, 50, 0, 0.6),
           0 0 300px rgba(255, 40, 0, 0.4);
         animation: glowPulse 3s ease-in-out infinite;
       }
 
-      /* 🔥 Flackernde Animation */
       @keyframes glowPulse {
-        0%, 100% {
-          text-shadow:
-            0 0 15px rgba(255, 220, 120, 1),
-            0 0 35px rgba(255, 170, 60, 1),
-            0 0 70px rgba(255, 120, 0, 1),
-            0 0 120px rgba(255, 70, 0, 0.9),
-            0 0 200px rgba(255, 40, 0, 0.8);
+        0%,
+        100% {
+          text-shadow: 0 0 15px rgba(255, 220, 120, 1),
+            0 0 35px rgba(255, 170, 60, 1), 0 0 70px rgba(255, 120, 0, 1),
+            0 0 120px rgba(255, 70, 0, 0.9), 0 0 200px rgba(255, 40, 0, 0.8);
         }
         50% {
-          text-shadow:
-            0 0 25px rgba(255, 240, 180, 1),
-            0 0 50px rgba(255, 200, 80, 1),
-            0 0 100px rgba(255, 150, 0, 1),
-            0 0 180px rgba(255, 90, 0, 1),
-            0 0 260px rgba(255, 60, 0, 0.9);
+          text-shadow: 0 0 25px rgba(255, 240, 180, 1),
+            0 0 50px rgba(255, 200, 80, 1), 0 0 100px rgba(255, 150, 0, 1),
+            0 0 180px rgba(255, 90, 0, 1), 0 0 260px rgba(255, 60, 0, 0.9);
         }
       }
 
@@ -81,65 +78,183 @@
       .content {
         width: 70%;
         max-width: 750px;
-        margin: 0 auto 80px;
+        margin: 0 auto 40px;
         font-size: 0.85em;
         line-height: 1.25;
         text-align: center;
         position: relative;
         z-index: 2;
-        text-shadow: 0 0 8px rgba(0,0,0,0.9);
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
       }
 
       .content p {
         margin: 5px 0;
       }
 
-      /* 🔥 Animiertes Feuer am unteren Rand */
+      .link-box {
+        text-align: center;
+        font-size: 0.85em;
+        margin-top: -20px;
+        margin-bottom: 80px;
+        z-index: 2;
+        position: relative;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+      }
+
+      .link-box a {
+        color: #fefefe;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+
+      .link-box a:hover {
+        color: #ff9900;
+      }
+
+      .kristina-link {
+        color: #800080;
+      }
+
       .fire-background {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 180px;
-        background: url('fire-fire-emote.gif') center bottom repeat-x;
+        background: url("fire-fire-emote.gif") center bottom repeat-x;
         background-size: contain;
         opacity: 0.8;
         z-index: 1;
         pointer-events: none;
       }
 
+      .hexe-gif {
+        position: fixed;
+        bottom: 180px;
+        left: 20px;
+        width: 200px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .hexe-gif-right {
+        position: fixed;
+        bottom: 180px;
+        right: 20px;
+        width: 200px;
+        z-index: 10;
+        pointer-events: none;
+        transform: scaleX(-1);
+      }
+
+      .witch-gif {
+        position: fixed;
+        bottom: 180px;
+        right: 120px;
+        width: 140px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .broom-gif {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 200px;
+        z-index: 0; /* Hinter dem Modell */
+        pointer-events: none;
+        opacity: 0.85;
+      }
+
       @media (max-width: 600px) {
-        h2 { font-size: 3em; }
-        .content { width: 90%; font-size: 0.8em; margin-bottom: 60px; }
-        .fire-background { height: 120px; }
+        h2 {
+          font-size: 3em;
+        }
+
+        .content {
+          width: 90%;
+          font-size: 0.8em;
+          margin-bottom: 60px;
+        }
+
+        .link-box {
+          font-size: 0.8em;
+          margin-bottom: 60px;
+        }
+
+        .fire-background {
+          height: 120px;
+        }
+
+        .hexe-gif,
+        .hexe-gif-right {
+          width: 130px;
+          bottom: 120px;
+        }
+
+        .hexe-gif {
+          left: 10px;
+        }
+
+        .hexe-gif-right {
+          right: 10px;
+        }
+
+        .witch-gif {
+          width: 100px;
+          bottom: 120px;
+          right: 110px;
+        }
+
+        .broom-gif {
+          width: 130px;
+          top: 10px;
+          right: 10px;
+        }
       }
     </style>
   </head>
 
   <body>
-    <h2>Die letzte Hexenverbrennung Hamburgs</h2>
+    <h2>Frauen im Feuer der Macht</h2>
+
+    
 
     <div class="model-container">
-      <model-viewer src="Untitled.glb"
-                    ios-src="Untitled.usdz"
-                    alt="3D-Modell"
-                    ar
-                    ar-modes="webxr scene-viewer quick-look"
-                    auto-rotate
-                    camera-controls
-                    autoplay
-                    environment-image="neutral">
-      </model-viewer>
+      <model-viewer
+        src="Untitled.glb"
+        ios-src="Untitled.usdz"
+        alt="3D-Modell"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        auto-rotate
+        camera-controls
+        autoplay
+        environment-image="neutral"
+      ></model-viewer>
     </div>
 
     <div class="content">
       <p><strong>Die letzte Hexenverfolgung in Hamburg</strong></p>
-      <p>Der letzte dokumentierte Hexenprozess mit Todesurteil in Hamburg fand im Jahr 1642 statt. Angeklagt war Cillie Hempels, der zur Last gelegt wurde, ihren Ehemann durch magische Praktiken getötet und einen Pakt mit dem Teufel geschlossen zu haben.</p>
+      <p>
+        Der letzte dokumentierte Hexenprozess mit Todesurteil in Hamburg fand im Jahr
+        1642 statt. Angeklagt war Cillie Hempels, der zur Last gelegt wurde, ihren
+        Ehemann durch magische Praktiken getötet und einen Pakt mit dem Teufel
+        geschlossen zu haben.
+      </p>
     </div>
-    <div class="text-box"> <a href="https://kristinaisla.github.io/projekt-/">Kristina</a>&larr; Screenschots  WEBRING &rarr;<a href="https://schninnaa.github.io/Daisy/">Kristina</a></div>
 
-
+    <div class="link-box">
+      &larr;
+      <a href="https://kristinaisla.github.io/projekt-/" class="kristina-link">Kristina</a> -
+      Hier sehen Sie weitere zauberhafte Sachen -
+      <a href="https://schninnaa.github.io/Daisy/" class="kristina-link">Kristina</a>
+      &rarr;
+    </div>
 
     <div class="fire-background"></div>
-  </body>
-</html>
+
+    <!-- Hexen-GIFs -->
+    <img src="Radio-disco-polo.gif" alt="Hexe links" class="hexe-gif" />
+    <img src="Radio-disco-polo.gif" alt="Hexe rechts gespiegelt" class="hexe-gif-right" />
