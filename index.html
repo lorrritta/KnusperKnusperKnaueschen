@@ -148,11 +148,20 @@
         transform: scaleX(-1);
       }
 
+      .witch-gif {
+        position: fixed;
+        bottom: 180px;
+        right: 120px;
+        width: 100px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
       .overlay-text {
         font-family: 'Comic Sans MS', cursive, sans-serif;
         font-size: 0.9em;
-        color: #d3b3ff;
-        background-color: rgba(0, 0, 0, 0.6);
+        color: #e6d6ff; /* helleres Lila */
+        background-color: rgba(0, 0, 0, 0.4); /* etwas transparenter für mehr Durchsicht */
         padding: 20px;
         width: 80%;
         max-width: 800px;
@@ -161,6 +170,7 @@
         z-index: 1;
         text-align: center;
         border-radius: 8px;
+        text-shadow: 0 0 12px rgba(230, 214, 255, 0.9); /* leichter Glow */
       }
 
       @media (max-width: 600px) {
@@ -195,6 +205,12 @@
 
         .hexe-gif-right {
           right: 10px;
+        }
+
+        .witch-gif {
+          width: 80px;
+          bottom: 120px;
+          right: 110px;
         }
 
         .overlay-text {
@@ -251,5 +267,6 @@
     <!-- Hexen-GIFs -->
     <img src="radio-disco-polo.gif" alt="Hexe links" class="hexe-gif" />
     <img src="radio-disco-polo.gif" alt="Hexe rechts gespiegelt" class="hexe-gif-right" />
+    
   </body>
 </html>
